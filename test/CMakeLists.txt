@@ -5,6 +5,6 @@ project(test_main)
 add_subdirectory(".." "${CMAKE_BINARY_DIR}/ResourceManager")
 include_directories("..")
 
-rm_embed_resources(RESOURCES)
+rm_embed_resources(RESOURCES "23")
 
 add_executable(${PROJECT_NAME} test_main.cpp ${RESOURCES})
