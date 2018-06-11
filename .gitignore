@@ -1,0 +1,8 @@
+.vs/
+build/
+bld/
+build-gcc/
+build_qtcreator/
+buildQt/
+CMakeLists.txt.user*
+QtOpenGL.pro.user*
