@@ -6,7 +6,7 @@ void testInvalidResource() {
   std::cout << "rhdi is valid = " << rhdi.isValid() << '\n';
 }
 
-int main(int argc, char* argv[]) {
+int main() {
   try {
     ResourceHandle rh1("res.txt");
     ResourceHandle rh2("res2.txt");

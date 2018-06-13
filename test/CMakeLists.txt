@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 project(test_main)
 
+if(MSVC)
+  add_compile_options(-WX -W4)
+elseif(MINGW)
+  add_compile_options(-Werror -Wall -Wextra -Wno-ignored-qualifiers -pedantic)
+endif()
+
 add_subdirectory(".." "${CMAKE_BINARY_DIR}/ResourceManager")
 include_directories(${RESOURCE_MANAGER_INCLUDE_DIRS})
 

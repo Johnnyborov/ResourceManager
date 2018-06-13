@@ -60,13 +60,13 @@ public:
   const size_t size() const noexcept { return m_data_len; }
   const size_t length() const noexcept { return m_data_len; }
 
-  const unsigned char* const data() const noexcept { return reinterpret_cast<const unsigned char*>(m_data_start); }
+  const unsigned char* const data() const noexcept { return m_data_start; }
 
-  const char* const c_str() const noexcept { return m_data_start; }
-  std::string string() const { return std::string(m_data_start, m_data_len); }
+  const char* const c_str() const noexcept { return reinterpret_cast<const char*>(m_data_start);; }
+  std::string string() const { return std::string(reinterpret_cast<const char*>(m_data_start), m_data_len); }
 
 private:
-  const char* m_data_start;
+  const unsigned char* m_data_start;
   size_t m_data_len;
 };
 
