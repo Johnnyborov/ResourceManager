@@ -1,3 +1,5 @@
+# Copyright (c) 2018 Johnny Borov <JohnnyBorov@gmail.com>. Released under MIT License.
+
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 
 project(test_main)

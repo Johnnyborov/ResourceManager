@@ -1,3 +1,5 @@
+// Copyright (c) 2018 Johnny Borov <JohnnyBorov@gmail.com>. Released under MIT License.
+
 #ifndef RM_RESOURCE_HANDLE_H
 #define RM_RESOURCE_HANDLE_H
 
