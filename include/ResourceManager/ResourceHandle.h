@@ -64,7 +64,7 @@ public:
 
   const unsigned char* const data() const noexcept { return m_data_start; }
 
-  const char* const c_str() const noexcept { return reinterpret_cast<const char*>(m_data_start);; }
+  const char* const c_str() const noexcept { return reinterpret_cast<const char*>(m_data_start); }
   std::string string() const { return std::string(reinterpret_cast<const char*>(m_data_start), m_data_len); }
 
 private:

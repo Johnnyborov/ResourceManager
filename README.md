@@ -1,6 +1,10 @@
 # ResourceManager
-ResourceManager is a light cross-platform C++/CMake library for embedding resource files (text files, images etc.) into executable/library.
-By light and cross-platform i mean that it only depends on C++ standard library and cmake and doesn't use anything system specific.
+ResourceManager is a light cross-platform C++ CMake library to embed resources into executables or libraries.
+Light and cross-platform here means that it only depends on C++ standard library and CMake and doesn't use anything system specific.
+Any type of resource files is possible for embedding (text files or binary files like images or any other data).
+
+It's based on compiling binary representation of resource files into C++ global byte array and provides easy and convenient means
+to access this array from C++ code.
 
 # To use ResourceManager
 1) Add it as a subdirectory into your project:
@@ -11,7 +15,7 @@ add_subdirectory("path to ResourceManager")
 ```
 include_directories(${RESOURCE_MANAGER_INCLUDE_DIRS})
 ```
-3) un rm_embed_resources command defined in subdirectory to generate source files containing resource files data:
+3) Run rm_embed_resources command defined in subdirectory to generate source files containing resource files data:
 ```
 rm_embed_resources(RESOURCES "res.txt" "src/main.cpp" "images/myimage.png")
 ```

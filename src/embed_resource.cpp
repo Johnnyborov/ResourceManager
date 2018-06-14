@@ -3,7 +3,7 @@
 #include <fstream>
 #include <string>
 
-void createResourceDataSourceFile(char* resource_name, char* resource_file_name, char* output_file_name);
+void generateResourceDataSourceFile(char* resource_name, char* resource_file_name, char* output_file_name);
 void generateResourcesConfigSourceFile(char* resource_names_list, char* config_file_name);
 std::string modifyFileName(std::string file_name);
 
@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
   // working directory = CMAKE_BINARY_DIR when called from cmake custom command
   if (std::string(argv[1]) == "-data") {
     if (argc == 5)
-      createResourceDataSourceFile(argv[2], argv[3], argv[4]);
+      generateResourceDataSourceFile(argv[2], argv[3], argv[4]);
     else
       return -1;
   } else if (std::string(argv[1]) == "-config") {
@@ -26,10 +26,10 @@ int main(int argc, char* argv[]) {
 }
 
 
-// create a cpp file (e.g. resources/res.txt.cpp) containing global extern array of const unsigned char
+// generate a cpp file (e.g. resources/res.txt.cpp) containing global extern array of const unsigned char
 // of binary data read from the requested input file (CMAKE_SOURCE_DIR/resources/res.txt) plus null-terminator
 // in the end of data and a global extern const size_t size of this data in bytes (without null-terminator)
-void createResourceDataSourceFile(char* resource_name, char* resource_file_name, char* output_file_name) {
+void generateResourceDataSourceFile(char* resource_name, char* resource_file_name, char* output_file_name) {
   std::string name{ resource_name }; // e.g. "resources/res.txt"
   std::string modified_name = modifyFileName(name); // becomes "resources__slash__res__dot__txt"
 
