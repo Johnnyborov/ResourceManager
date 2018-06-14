@@ -1,3 +1,5 @@
+// Copyright (c) 2018 Johnny Borov. Released under MIT License
+
 #include <fstream>
 #include <string>
 

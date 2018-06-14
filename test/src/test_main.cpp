@@ -1,3 +1,5 @@
+// Copyright (c) 2018 Johnny Borov. Released under MIT License
+
 #include <iostream>
 #include "ResourceManager/ResourceHandle.h"
 
